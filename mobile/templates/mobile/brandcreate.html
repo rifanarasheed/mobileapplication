@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{%extends 'mobile/base.html'%}
+
+{% block body_block%}
+
+<h1>create your brand here</h1>
+<div class="row">
+    <div class="col-12">
+        <form action="" method="post">
+            {%csrf_token%}
+            {{form.as_p}}
+            <input class="btn btn-primary" type="submit" value="create">
+        </form>
+        <a href="{%url 'mobilecreate'%}" class="btn btn-primary" style="position: relative; left: 70%;"> CLICK HERE TO CREATE MOBLE PRODUCT </a>
+    </div>
+<!--    to get all created brands-->
+    <div class="col-12">
+       <table class="table">
+           <tr>
+               <td><b>brand id</b></td>
+               <td><b>brand name</b></td>
+           </tr>
+           {% for brand in brands %}
+           <tr>
+               <td>{{brand.id}}</td>
+               <td>{{brand.brand_name}}</td>
+               <td><a href="{% url 'branddelete' brand.id %}">Delete</a></td>
+               <td><a href="{% url 'brandedit' brand.id %}">Edit</a></td>
+           </tr>
+           {% endfor %}
+       </table>
+
+    </div>
+</div>
+
+{% endblock %}

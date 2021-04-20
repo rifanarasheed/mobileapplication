@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'mobile/base.html' %}
+
+{% block body_block %}
+
+<h1>REGISTER HERE!</h1>
+<table>
+    <form action="" method="POST">
+        {%csrf_token%}
+        <tr>
+            <td>{{form.as_table}}</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="create user"></td>
+        </tr>
+    </form>
+</table>
+
+{% endblock %}

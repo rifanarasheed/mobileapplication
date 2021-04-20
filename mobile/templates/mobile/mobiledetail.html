@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'mobile/base.html' %}
+
+{%block body_block%}
+<div class=""container>
+    <div class="col-4"></div>
+    <div class="col-4">
+        <h1>{{mobile.model_name}}</h1>
+        <div>
+            <img src="{{mobile.img.url}}" height="100px" alt="">
+        </div>
+        <h2>{{mobile.price}}</h2>
+        <a href="{%url 'orderitem' mobile.id%}" class="btn btn-primary"> Add To Cart </a>
+    </div>
+    <div class="col-4"></div>
+</div>
+{%endblock%}

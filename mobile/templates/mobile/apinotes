@@ -1,0 +1,50 @@
+**************user authentication************
+# .../mobile/userRegistration
+post : create account
+
+# .../mobile/userlogin
+post : login to .../mobile/mobiles/list
+
+# .../mobile/userlogout
+
+
+***********Brands************
+SUPER USER ONLY HAVE ACCESS
+# .../mobile/brands
+get --> list all brands created
+post --> create a new brand
+status : completed
+
+# .../mobile/delete/id
+post --> delete that coressponding brand id and redirect into mobile/brands
+
+# .../mobile/edit/id
+get --> fetch that corresponding brand id
+post --> update that brand id and redirect into mobile/brands
+
+*************mobiles**********
+# .../mobile/mobiles
+post --> create new mobile
+
+# .../mobile/mobiles/list
+get --> list all mobiles
+
+# .../mobile/mobiles/edit/id
+
+# .../mobile/mobiles/delete/id
+
+# .../mobile/mobiles/detail/id
+you can view details as well as purchase them
+
+# .../mobile/order/id
+get --> you can view product name as well as username and field for address
+post --> to add product into cart
+
+# .../mobile/cart
+get --> you can view list of products added to the card
+
+# .../mobile/cartview/name
+
+# .../mob
+
+
